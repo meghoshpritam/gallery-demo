@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "NODE_ENV=development && tailwindcss -i ./src/assets/styles.css -o ./src/assets/style.min.css",
+    "build": "NODE_ENV=production tailwindcss -i ./src/assets/styles.css -o ./src/assets/style.min.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}

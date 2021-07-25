@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/gallery/photoswipe.css">
+    <link rel="stylesheet" href="./assets/gallery/default-skin/default-skin.css">
+    <link rel="stylesheet" href="./assets/style.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <style>
+        figure img {
+           object-fit: cover;
+           object-position: center;
+           width: 100%;
+           height: 100%;
+        }
+
+        figure figcaption {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.939 44" id="folder-icon">
+            <path d="M7.47 20a4 4 0 01-4-4V4a4 4 0 014-4h8a4 4 0 014 4h24a4 4 0 014 4v8a4 4 0 01-4 4z" fill="#f59d00"></path>
+            <path fill="#ecf0f1" d="M1.47 8h48v10h-48z"></path>
+            <path d="M.032 16.5A4 4 0 014.001 12h42.936a4 4 0 013.969 4.5l-3 24a4 4 0 01-3.969 3.5H7.001a4 4 0 01-3.969-3.5z" fill="currentColor"></path>
+        </symbol>
+    </svg>
+    <section class="container mx-auto px-5">
+        <h1 class="text-gray-800 text-center text-4xl font-bold">Gallery</h1>
+        <hr class="bg-blue-600 border-none h-1 w-20 mx-auto mt-1">
+        <div class="mt-20 grid grid-cols-8 gap-5">
+            <div class="flex flex-col items-center cursor-pointer text-gray-700 group ease-in-out duration-500">
+                <svg class="w-32 h-32 text-yellow-300 group-hover:text-yellow-500">
+                    <use xlink:href="#folder-icon"></use>
+                </svg>
+                <h2 class="text-lg mt-1">Year 2021</h2>
+            </div>
+            <div class="flex flex-col items-center cursor-pointer text-gray-700 group ease-in-out duration-500">
+              <svg class="w-32 h-32 text-yellow-300 group-hover:text-yellow-500">
+                  <use xlink:href="#folder-icon"></use>
+              </svg>
+              <h2 class="text-lg mt-1">Year 2020</h2>
+          </div>
+          <div class="flex flex-col items-center cursor-pointer text-gray-700 group ease-in-out duration-500">
+            <svg class="w-32 h-32 text-yellow-300 group-hover:text-yellow-500">
+                <use xlink:href="#folder-icon"></use>
+            </svg>
+            <h2 class="text-lg mt-1">Year 2019</h2>
+        </div>
+        <div class="flex flex-col items-center cursor-pointer text-gray-700 group ease-in-out duration-500">
+          <svg class="w-32 h-32 text-yellow-300 group-hover:text-yellow-500">
+              <use xlink:href="#folder-icon"></use>
+          </svg>
+          <h2 class="text-lg mt-1">Year 2018</h2>
+      </div>
+        </div>
+    </section>
+    <section>
+        <h2>First gallery:</h2>
+
+        <div class="grid grid-cols-6 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 1</figcaption>
+
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+                    <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 2</figcaption>
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+                    <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 3</figcaption>
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+                    <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 4</figcaption>
+            </figure>
+
+
+        </div>
+
+        <h2>Second gallery:</h2>
+
+        <div class="my-gallery grid grid-cols-6" itemscope itemtype="http://schema.org/ImageGallery">
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+                    <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 2.1</figcaption>
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+                    <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 2.2</figcaption>
+            </figure>
+
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+                    <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+                </a>
+                <figcaption itemprop="caption description">Image caption 2.3</figcaption>
+            </figure>
+
+
+        </div>
+
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+            <!-- Background of PhotoSwipe. 
+       It's a separate element, as animating opacity is faster than rgba(). -->
+            <div class="pswp__bg"></div>
+
+            <!-- Slides wrapper with overflow:hidden. -->
+            <div class="pswp__scroll-wrap">
+
+                <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                <div class="pswp__ui pswp__ui--hidden">
+
+                    <div class="pswp__top-bar">
+
+                        <!--  Controls are self-explanatory. Order can be changed. -->
+
+                        <div class="pswp__counter"></div>
+
+                        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                        <!-- element will get class pswp__preloader--active when preloader is running -->
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div>
+
+                    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <script src="./assets/gallery/photoswipe.min.js" async></script>
+    <script src="./assets/gallery/photoswipe-ui-default.min.js" async></script>
+    <script src="./assets/app.js" async></script>
+</body>
+
+</html>
