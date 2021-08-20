@@ -207,3 +207,46 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+
+
+
+function showImages(element) {
+  var folderName = element.querySelector('h2').innerText;
+  var folder = element.getAttribute('data-folder');
+  var title = document.querySelector('[data-name="gallery-title"]');
+  title.innerHTML = folderName + ' Gallery';
+  var showingImageSection = document.querySelector('[data-name="images-container"]');
+  var imagesContainer = document.querySelector('[data-name="images-container-all"]');
+
+  console.log(">>> ", element, folder);
+  console.log(">>> ", folderName, title);
+
+  var images = imagesContainer.querySelectorAll('figure');
+  for (var idx = 0; idx < images.length; idx += 1) {
+    var names = images[idx].getAttribute('data-folders').split(',');
+    var isMatch = false;
+    for (var index = 0; index < names.length; index += 1) {
+      if (names[index].trim() === folder) {
+        isMatch = true;
+        break;
+      }
+    }
+    if (isMatch) showingImageSection.appendChild(images[idx].cloneNode(true));
+  }
+
+  document.querySelector('[data-name="back-button"]').classList.remove('hidden');
+  document.querySelector('[data-section="folder-section"]').classList.add('hidden');
+  showingImageSection.classList.remove('hidden');
+}
+
+function closeImages() {
+  var title = document.querySelector('[data-name="gallery-title"]');
+  title.innerHTML = 'Gallery';
+  var imagesContainer = document.querySelector('[data-name="images-container"]');
+
+  imagesContainer.innerHTML='';
+  imagesContainer.classList.add('hidden');
+
+  document.querySelector('[data-name="back-button"]').classList.add('hidden');
+  document.querySelector('[data-section="folder-section"]').classList.remove('hidden');
+}
