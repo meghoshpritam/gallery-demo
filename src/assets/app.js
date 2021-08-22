@@ -218,9 +218,6 @@ function showImages(element) {
   var showingImageSection = document.querySelector('[data-name="images-container"]');
   var imagesContainer = document.querySelector('[data-name="images-container-all"]');
 
-  console.log(">>> ", element, folder);
-  console.log(">>> ", folderName, title);
-
   var images = imagesContainer.querySelectorAll('figure');
   for (var idx = 0; idx < images.length; idx += 1) {
     var names = images[idx].getAttribute('data-folders').split(',');
@@ -235,6 +232,7 @@ function showImages(element) {
   }
 
   document.querySelector('[data-name="back-button"]').classList.remove('hidden');
+  document.querySelector('[data-name="back-button"]').classList.add('flex');
   document.querySelector('[data-section="folder-section"]').classList.add('hidden');
   showingImageSection.classList.remove('hidden');
 }
@@ -248,5 +246,6 @@ function closeImages() {
   imagesContainer.classList.add('hidden');
 
   document.querySelector('[data-name="back-button"]').classList.add('hidden');
+  document.querySelector('[data-name="back-button"]').classList.remove('flex');
   document.querySelector('[data-section="folder-section"]').classList.remove('hidden');
 }

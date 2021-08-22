@@ -28,7 +28,7 @@
 
 </head>
 
-<body>
+<body class="bg-gray-100">
   <svg width="0" height="0" class="hidden">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.939 44" id="folder-icon">
       <path d="M7.47 20a4 4 0 01-4-4V4a4 4 0 014-4h8a4 4 0 014 4h24a4 4 0 014 4v8a4 4 0 01-4 4z"
@@ -40,123 +40,213 @@
     </symbol>
   </svg>
 
-  <section class="container px-5 mx-auto">
-    <div class="relative mt-4">
-      <button
-        class="absolute left-0 flex items-center hidden mt-1 text-gray-700 sm:mt-2 hover:text-gray-900"
-        onclick="closeImages();" data-name="back-button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-0.5" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M15 19l-7-7 7-7" />
-        </svg>
-        <span>
-          Back
-        </span>
-      </button>
-      <h1 class="text-2xl font-bold text-center text-gray-800 sm:text-3xl md:text-4xl"
-        data-name="gallery-title">
-        Gallery</h1>
+  <section class="container px-5 mx-auto mt-16 mb-24">
+    <button class="items-center hidden mt-1 text-sm text-gray-700 sm:mt-2 hover:text-gray-900"
+      onclick="closeImages();" data-name="back-button">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 mr-0.5" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      <span>
+        Back
+      </span>
+    </button>
+    <div class="flex items-center justify-center mt-1 mb-14">
+      <div>
+        <h1 class="text-2xl font-bold text-center text-gray-800 sm:text-3xl md:text-4xl"
+          data-name="gallery-title">
+          Gallery
+        </h1>
+        <hr class="w-4/5 h-0.75 mx-auto mt-2 bg-blue-600 border-none">
+      </div>
     </div>
-    <hr class="w-20 h-1 mx-auto mt-1 bg-blue-600 border-none mb-14">
 
     <!--  folder section start  -->
     <div
-      class="grid grid-cols-2 gap-5 duration-500 ease-in-out sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-9"
+      class="grid grid-cols-2 gap-8 duration-500 ease-in-out sm:gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7"
       data-section="folder-section">
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-1" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
-          <use xlink:href="#folder-icon"></use>
-        </svg>
-        <h2 class="mt-1 text-lg">Year 2021</h2>
+        data-folder="botany" role="button" onclick="showImages(this);">
+        <img src="/home/computer/work/gallery-demo/Botany.jpg" alt="Botany"
+          class="object-cover w-20 h-20 transform sm:w-32 sm:h-32">
+        <h2 class="mt-1 text-sm text-center group-hover:text-blue-600 group-hover:font-bold">Botany</h2>
       </div>
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-2" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="chemistry" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 transform sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2020</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Chemistry</h2>
       </div>
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-3" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="computer-science" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2019</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Computer Science</h2>
       </div>
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-4" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="environmental-science" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
-      </div>
-
-
-      <div
-        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-5" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
-          <use xlink:href="#folder-icon"></use>
-        </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Environmental Science</h2>
       </div>
 
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-6" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="food-and-nutrition" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Food And Nutrition</h2>
       </div>
 
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-7" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="geography" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Geography</h2>
       </div>
 
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-8" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="mathematics" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Mathematics</h2>
       </div>
 
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-9" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="microbiology" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Microbiology</h2>
+      </div>
+
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="molecular-biology-and-biotechnology" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Molecular Biology And Biotechnology</h2>
       </div>
 
       <div
         class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
-        data-folder="folder-10" role="button" onclick="showImages(this);">
-        <svg class="text-yellow-300 w-28 h-28 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+        data-folder="physics" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
           <use xlink:href="#folder-icon"></use>
         </svg>
-        <h2 class="mt-1 text-lg">Year 2018</h2>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Physics</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="zoology" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Zoology</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="bengali" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Bengali</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="economics" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Economics</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="english" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">English</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="hindi" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Hindi</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="history" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">History</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="philosophy" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Philosophy</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="political-science" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Political Science</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="sanskrit" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Sanskrit</h2>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-gray-700 duration-500 ease-in-out cursor-pointer group"
+        data-folder="commerce" role="button" onclick="showImages(this);">
+        <svg class="w-20 h-20 text-yellow-300 sm:w-32 sm:h-32 group-hover:text-yellow-500">
+          <use xlink:href="#folder-icon"></use>
+        </svg>
+        <h2 class="mt-1 text-sm font-medium text-center group-hover:text-blue-600">Commerce</h2>
       </div>
     </div>
     <!--  folder section end  -->
@@ -166,13 +256,13 @@
 
     <div class="hidden" data-name="images-container-all">
       <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"
-        data-folders="folder-1,folder-2">
+        data-folders="bengali">
         <a href="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"
           itemprop="contentUrl" data-size="1024x1024">
           <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 1
+        <figcaption itemprop="caption description" class="truncate px-0.5 text-sm">Image caption 1
         </figcaption>
       </figure>
 
@@ -183,7 +273,7 @@
           <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 2
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 2
         </figcaption>
       </figure>
 
@@ -194,7 +284,7 @@
           <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 3
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 3
         </figcaption>
       </figure>
 
@@ -205,7 +295,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -216,7 +306,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -227,7 +317,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -238,7 +328,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -249,7 +339,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -260,7 +350,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -271,7 +361,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -282,7 +372,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -293,7 +383,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
 
@@ -304,7 +394,7 @@
           <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg"
             itemprop="thumbnail" alt="Image description" />
         </a>
-        <figcaption itemprop="caption description" class="truncate px-0.5">Image caption 4
+        <figcaption itemprop="caption description" h2 class="mt-1 text-lg">Image caption 4
         </figcaption>
       </figure>
     </div>
