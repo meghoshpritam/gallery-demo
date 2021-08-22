@@ -916,8 +916,12 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sm\:gap-5 {
-    gap: 1.25rem;
+  .sm\:gap-7 {
+    gap: 1.75rem;
+  }
+
+  .sm\:gap-y-12 {
+    row-gap: 3rem;
   }
 
   .sm\:text-3xl {
